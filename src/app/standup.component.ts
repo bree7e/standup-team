@@ -8,6 +8,11 @@ import {
   CdkDropList,
 } from '@angular/cdk/drag-drop';
 
+interface StandupPerson {
+  name: string;
+  position: string;
+}
+
 @Component({
   selector: 'standup-team-welcome',
   standalone: true,
@@ -25,7 +30,10 @@ import {
         (cdkDropListDropped)="drop($event)"
       >
         @for (item of todo; track item) {
-        <div class="box" cdkDrag>{{ item }}</div>
+        <div class="box" cdkDrag>
+          <div>{{ item.name }}</div>
+          <div class="position">{{ item.position }}</div>
+        </div>
         }
       </div>
     </div>
@@ -42,7 +50,10 @@ import {
         (cdkDropListDropped)="drop($event)"
       >
         @for (item of done; track item) {
-        <div class="box" cdkDrag>{{ item }}</div>
+        <div class="box" cdkDrag>
+          <div>{{ item.name }}</div>
+          <div class="position">{{ item.position }}</div>
+        </div>
         }
       </div>
     </div>
@@ -67,17 +78,21 @@ import {
       }
 
       .box {
-        padding: 20px 10px;
+        padding: 10px 10px;
         border-bottom: solid 1px #ccc;
         color: rgba(0, 0, 0, 0.87);
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: space-between;
         box-sizing: border-box;
         cursor: move;
         background: white;
         font-size: 14px;
+      }
+
+      .position {
+        color: grey;
       }
 
       .cdk-drag-preview {
@@ -105,12 +120,34 @@ import {
     `,
   ],
 })
-export class NxWelcomeComponent {
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+export class StandupComponent {
+  todo: StandupPerson[] = [
+    { position: 'Владелец продукта', name: 'Иван Запольский' },
+    { position: 'Delivery Manager', name: 'Ника Решанова' },
+    { position: 'QA Lead', name: 'Евгений Питрук' },
+    { position: 'QA-инженер', name: '' },
+    { position: 'QA-инженер', name: 'Юлия Мартынова' },
+    { position: 'Backend Lead/ Архитектор', name: 'Александр Денщиков' },
+    { position: 'Бэкенд-разработчик', name: 'Александр Кравчук' },
+    { position: 'Бэкенд-разработчик', name: 'Захар Алёшкин' },
+    { position: 'Бэкенд-разработчик', name: 'Никита Шивинский' },
+    { position: 'Бэкенд-разработчик', name: 'Павел Парфенов' },
+    { position: 'Фронтенд Lead', name: 'Александр Ветров' },
+    { position: 'Фронтенд-разработчик', name: 'Владимир Ермолин' },
+    { position: 'Фронтенд-разработчик', name: 'Денис Ситдиков' },
+    { position: 'Фронтенд-разработчик', name: 'Сергей Тихонов' },
+    { position: 'Продуктовый аналитик', name: 'Вадим Ус' },
+    { position: 'Системный аналитик', name: 'Алексей Кулёв' },
+    { position: 'Системный инженер', name: 'Рустам Галимов' },
+    { position: 'Математик', name: '' },
+    { position: '', name: 'Алексей Кручинин' },
+    { position: '', name: 'Виктория Гилль' },
+    { position: 'Ксения Непомнящая', name: 'Технический писатель' },
+  ];
 
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+  done: StandupPerson[] = [];
 
-  drop(event: CdkDragDrop<string[]>) {
+  drop(event: CdkDragDrop<StandupPerson[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
