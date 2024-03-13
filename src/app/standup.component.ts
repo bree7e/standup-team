@@ -9,6 +9,7 @@ import {
 } from '@angular/cdk/drag-drop';
 
 interface StandupPerson {
+  color: string;
   name: string;
   position: string;
 }
@@ -24,15 +25,16 @@ interface StandupPerson {
       <div
         cdkDropList
         #todoList="cdkDropList"
+        class="list"
         [cdkDropListData]="todo"
         [cdkDropListConnectedTo]="[doneList]"
-        class="list"
         (cdkDropListDropped)="drop($event)"
       >
         @for (item of todo; track item) {
-        <div class="box" cdkDrag>
-          <div>{{ item.name }}</div>
-          <div class="position">{{ item.position }}</div>
+        <div class="person" cdkDrag>
+          <div class="person__side" [style.background-color]="item.color"></div>
+          <div class="person__name">{{ item.name }}</div>
+          <div class="person__position">{{ item.position }}</div>
         </div>
         }
       </div>
@@ -50,9 +52,9 @@ interface StandupPerson {
         (cdkDropListDropped)="drop($event)"
       >
         @for (item of done; track item) {
-        <div class="box" cdkDrag>
-          <div>{{ item.name }}</div>
-          <div class="position">{{ item.position }}</div>
+        <div class="person" cdkDrag>
+          <div class="person__side" [style.background-color]="item.color"></div>
+          <div class="person__name">{{ item.name }}</div>
         </div>
         }
       </div>
@@ -77,21 +79,31 @@ interface StandupPerson {
         display: block;
       }
 
-      .box {
+      .person {
         padding: 10px 10px;
         border-bottom: solid 1px #ccc;
         color: rgba(0, 0, 0, 0.87);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
+
+        display: grid;
+        column-gap: 8px;
+        grid-template-columns: 8px auto;
+        grid-template-rows: auto auto;
+
         box-sizing: border-box;
         cursor: move;
         background: white;
         font-size: 14px;
       }
 
-      .position {
+      .person__side {
+        display: block;
+        width: 8px;
+        border-radius: 4px;
+        grid-row: span 2;
+        margin-right: 16px;
+      }
+
+      .person__position {
         color: grey;
       }
 
@@ -122,25 +134,54 @@ interface StandupPerson {
 })
 export class StandupComponent {
   todo: StandupPerson[] = [
-    { position: 'Product owner', name: 'Иван Запольский' },
-    { position: 'Delivery Manager', name: 'Ника Решанова' },
-    { position: 'Системный аналитик', name: 'Алексей Кулёв' },
-    { position: 'Продуктовый аналитик', name: 'Вадим Ус' },
-    { position: 'Tech Lead', name: 'Александр Денщиков' },
-    { position: 'Backend Developer', name: 'Александр Кравчук' },
-    { position: 'Backend Developer', name: 'Захар Алёшкин' },
-    { position: 'Backend Developer', name: 'Никита Шивинский' },
-    { position: 'Frontend Lead', name: 'Александр Ветров' },
-    { position: 'Frontend Developer', name: 'Владимир Ермолин' },
-    { position: 'Frontend Developer', name: 'Денис Ситдиков' },
-    { position: 'Frontend Developer', name: 'Сергей Тихонов' },
-    { position: 'QA-лид', name: 'Евгений Питрук' },
-    { position: 'QA-инженер', name: 'Виктория Гилль' },
-    { position: 'QA-инженер', name: 'Юлия Мартынова' },
-    { position: 'QA-инженер', name: 'Павел Парфёнов' },
-    { position: 'DevOps инженер', name: 'Рустам Галимов' },
-    { position: 'Математик', name: 'Алексей Кручинин' },
-    { position: 'Технический писатель', name: 'Ксения Непомнящая' },
+    { color: '#c13f2f', position: 'Product owner', name: 'Иван Запольский' },
+    { color: '#c13f2f', position: 'Delivery Manager', name: 'Ника Решанова' },
+    { color: '#6e778c', position: 'Системный аналитик', name: 'Алексей Кулёв' },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Олег Колношенко',
+    },
+    { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
+    { color: '#436cee', position: 'Tech Lead', name: 'Александр Денщиков' },
+    {
+      color: '#436cee',
+      position: 'Backend Developer',
+      name: 'Александр Кравчук',
+    },
+    { color: '#436cee', position: 'Backend Developer', name: 'Захар Алёшкин' },
+    {
+      color: '#436cee',
+      position: 'Backend Developer',
+      name: 'Никита Шивинский',
+    },
+    { color: '#498714', position: 'Frontend Lead', name: 'Александр Ветров' },
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Владимир Ермолин',
+    },
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Денис Ситдиков',
+    },
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Сергей Тихонов',
+    },
+    { color: '#ec9827', position: 'QA-лид', name: 'Евгений Питрук' },
+    { color: '#ec9827', position: 'QA-инженер', name: 'Виктория Гилль' },
+    { color: '#ec9827', position: 'QA-инженер', name: 'Юлия Мартынова' },
+    { color: '#ec9827', position: 'QA-инженер', name: 'Павел Парфёнов' },
+    { color: '#f3f4f5', position: 'DevOps инженер', name: 'Рустам Галимов' },
+    { color: '#f3f4f5', position: 'Математик', name: 'Алексей Кручинин' },
+    {
+      color: '#f3f4f5',
+      position: 'Технический писатель',
+      name: 'Ксения Непомнящая',
+    },
   ];
 
   done: StandupPerson[] = [];

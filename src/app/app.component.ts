@@ -7,7 +7,12 @@ import { StandupComponent } from './standup.component';
   imports: [StandupComponent, RouterModule],
   selector: 'standup-team-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styles: `
+  :host {
+    display: block;
+    margin: 16px;
+  } 
+  `,
 })
 export class AppComponent {
   title = 'Daily Standup';
