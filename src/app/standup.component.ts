@@ -63,7 +63,7 @@ interface StandupPerson {
   styles: [
     `
       .container {
-        width: 400px;
+        width: 300px;
         max-width: 100%;
         margin: 0 25px 25px 0;
         display: inline-block;
@@ -72,7 +72,7 @@ interface StandupPerson {
 
       .list {
         border: solid 1px #ccc;
-        min-height: 60px;
+        min-height: 80px;
         background: white;
         border-radius: 4px;
         overflow: hidden;
@@ -136,13 +136,13 @@ export class StandupComponent {
   todo: StandupPerson[] = [
     { color: '#c13f2f', position: 'Product owner', name: 'Иван Запольский' },
     { color: '#c13f2f', position: 'Delivery Manager', name: 'Ника Решанова' },
+    { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
     { color: '#6e778c', position: 'Системный аналитик', name: 'Алексей Кулёв' },
     {
       color: '#6e778c',
       position: 'Системный аналитик',
       name: 'Олег Колношенко',
     },
-    { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
     { color: '#436cee', position: 'Tech Lead', name: 'Александр Денщиков' },
     {
       color: '#436cee',
