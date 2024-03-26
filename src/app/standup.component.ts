@@ -159,11 +159,6 @@ export class StandupComponent {
     {
       color: '#498714',
       position: 'Frontend Developer',
-      name: 'Владимир Ермолин',
-    },
-    {
-      color: '#498714',
-      position: 'Frontend Developer',
       name: 'Денис Ситдиков',
     },
     {
