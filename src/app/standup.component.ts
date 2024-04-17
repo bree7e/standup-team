@@ -20,8 +20,6 @@ interface StandupPerson {
   imports: [CommonModule, CdkDropList, CdkDrag],
   template: `
     <div class="container">
-      <h2>To do</h2>
-
       <div
         cdkDropList
         #todoList="cdkDropList"
@@ -33,16 +31,16 @@ interface StandupPerson {
         @for (item of todo; track item) {
         <div class="person" cdkDrag>
           <div class="person__side" [style.background-color]="item.color"></div>
-          <div class="person__name">{{ item.name }}</div>
-          <div class="person__position">{{ item.position }}</div>
+          <div class="person__name">
+            {{ item.name }}
+            <span class="person__position">{{ item.position }}</span>
+          </div>
         </div>
         }
       </div>
     </div>
 
     <div class="container">
-      <h2>Done</h2>
-
       <div
         cdkDropList
         #doneList="cdkDropList"
@@ -63,7 +61,7 @@ interface StandupPerson {
   styles: [
     `
       .container {
-        width: 300px;
+        width: 320px;
         max-width: 100%;
         margin: 0 25px 25px 0;
         display: inline-block;
