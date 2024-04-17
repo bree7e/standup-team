@@ -143,6 +143,11 @@ export class StandupComponent {
       position: 'Системный аналитик',
       name: 'Олег Колношенко',
     },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Владимир Кабаков',
+    },
     { color: '#436cee', position: 'Tech Lead', name: 'Александр Денщиков' },
     {
       color: '#436cee',
@@ -170,10 +175,10 @@ export class StandupComponent {
     { color: '#ec9827', position: 'QA-инженер', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Юлия Мартынова' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Павел Парфёнов' },
-    { color: '#f3f4f5', position: 'DevOps инженер', name: 'Рустам Галимов' },
-    { color: '#f3f4f5', position: 'Математик', name: 'Алексей Кручинин' },
+    { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
+    { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
     {
-      color: '#f3f4f5',
+      color: '#a56eff',
       position: 'Технический писатель',
       name: 'Ксения Непомнящая',
     },
