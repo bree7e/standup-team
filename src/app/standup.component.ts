@@ -173,6 +173,7 @@ export class StandupComponent {
     { color: '#ec9827', position: 'QA-инженер', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Юлия Мартынова' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Павел Парфёнов' },
+    { color: '#ec9827', position: 'QA-инженер', name: 'Евгений Кульков' },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
     { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
     {
