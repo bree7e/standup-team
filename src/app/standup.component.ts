@@ -169,6 +169,11 @@ export class StandupComponent {
       position: 'Frontend Developer',
       name: 'Сергей Тихонов',
     },
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Александр Фёдоров',
+    },
     { color: '#ec9827', position: 'QA-лид', name: 'Евгений Питрук' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Юлия Мартынова' },
