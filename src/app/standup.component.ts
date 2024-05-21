@@ -152,7 +152,6 @@ export class StandupComponent {
       position: 'Backend Developer',
       name: 'Александр Кравчук',
     },
-    { color: '#436cee', position: 'Backend Developer', name: 'Захар Алёшкин' },
     {
       color: '#436cee',
       position: 'Backend Developer',
@@ -179,6 +178,7 @@ export class StandupComponent {
     { color: '#ec9827', position: 'QA-инженер', name: 'Юлия Мартынова' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Павел Парфёнов' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Евгений Кульков' },
+    { color: '#a56eff', position: 'UX дизайнер', name: 'Алиса Акулинина' },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
     { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
     {
