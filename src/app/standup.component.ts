@@ -132,7 +132,7 @@ interface StandupPerson {
 })
 export class StandupComponent {
   todo: StandupPerson[] = [
-    { color: '#c13f2f', position: 'Product owner', name: 'Иван Запольский' },
+    { color: '#c13f2f', position: 'Product owner', name: 'Сергей Балашов' },
     { color: '#c13f2f', position: 'Delivery Manager', name: 'Ника Решанова' },
     { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
     { color: '#6e778c', position: 'Системный аналитик', name: 'Алексей Кулёв' },
@@ -173,11 +173,10 @@ export class StandupComponent {
       position: 'Frontend Developer',
       name: 'Александр Фёдоров',
     },
-    { color: '#ec9827', position: 'QA-лид', name: 'Евгений Питрук' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Юлия Мартынова' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Павел Парфёнов' },
-    { color: '#ec9827', position: 'QA-инженер', name: 'Евгений Кульков' },
+    { color: '#ec9827', position: 'QA-инженер до 31 мая', name: 'Евгений Кульков' },
     { color: '#a56eff', position: 'UX дизайнер', name: 'Алиса Акулинина' },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
     { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
@@ -188,7 +187,9 @@ export class StandupComponent {
     },
   ];
 
-  done: StandupPerson[] = [];
+  done: StandupPerson[] = [
+    { color: '#ec9827', position: 'QA-лид', name: 'Евгений Питрук' },
+  ];
 
   drop(event: CdkDragDrop<StandupPerson[]>) {
     if (event.previousContainer === event.container) {
