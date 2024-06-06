@@ -145,7 +145,6 @@ export class StandupComponent {
       position: 'Системный аналитик',
       name: 'Владимир Кабаков',
     },
-    { color: '#436cee', position: 'Tech Lead', name: 'Александр Денщиков' },
     {
       color: '#436cee',
       position: 'Backend Developer',
@@ -187,7 +186,16 @@ export class StandupComponent {
   ];
 
   done: StandupPerson[] = [
-    { color: '#6e778c', position: 'Системный аналитик, отпуск до 16 июня', name: 'Алексей Кулёв' },
+    {
+      color: '#436cee',
+      position: 'Tech Lead',
+      name: 'Александр Денщиков отпуск до 19 июня',
+    },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик, отпуск до 16 июня',
+      name: 'Алексей Кулёв',
+    },
   ];
 
   drop(event: CdkDragDrop<StandupPerson[]>) {
