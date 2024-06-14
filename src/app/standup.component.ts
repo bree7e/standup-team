@@ -134,6 +134,11 @@ export class StandupComponent {
   todo: StandupPerson[] = [
     { color: '#c13f2f', position: 'Product owner', name: 'Сергей Балашов' },
     { color: '#c13f2f', position: 'Delivery Manager', name: 'Ника Решанова' },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик ',
+      name: 'Алексей Кулёв',
+    },
     { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
     {
       color: '#6e778c',
@@ -173,7 +178,6 @@ export class StandupComponent {
     },
     { color: '#ec9827', position: 'QA-лид', name: 'Евгений Питрук' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Виктория Гилль' },
-    { color: '#ec9827', position: 'QA-инженер', name: 'Юлия Мартынова' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Павел Парфёнов' },
     { color: '#a56eff', position: 'UX дизайнер', name: 'Алиса Акулинина' },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
@@ -187,14 +191,14 @@ export class StandupComponent {
       name: 'Александр Денщиков отпуск до 19 июня',
     },
     {
-      color: '#6e778c',
-      position: 'Системный аналитик ',
-      name: 'Алексей Кулёв отпуск до 16 июня',
-    },
-    {
       color: '#a56eff',
       position: 'Технический писатель',
       name: 'Ксения Непомнящая отпуск до 25 июня',
+    },
+    { 
+      color: '#ec9827', 
+      position: 'QA-инженер', 
+      name: 'Юлия Мартынова отпуск до 30 июня' 
     },
   ];
 
