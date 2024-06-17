@@ -146,11 +146,6 @@ export class StandupComponent {
       name: 'Олег Колношенко',
     },
     {
-      color: '#6e778c',
-      position: 'Системный аналитик',
-      name: 'Владимир Кабаков',
-    },
-    {
       color: '#436cee',
       position: 'Backend Developer',
       name: 'Александр Кравчук',
