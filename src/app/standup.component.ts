@@ -147,6 +147,11 @@ export class StandupComponent {
     },
     {
       color: '#436cee',
+      position: 'Tech Lead',
+      name: 'Александр Денщиков',
+    },
+    {
+      color: '#436cee',
       position: 'Backend Developer',
       name: 'Александр Кравчук',
     },
@@ -177,23 +182,18 @@ export class StandupComponent {
     { color: '#a56eff', position: 'UX дизайнер', name: 'Алиса Акулинина' },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
     { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
+    {
+      color: '#a56eff',
+      position: 'Технический писатель',
+      name: 'Ксения Непомнящая',
+    },
   ];
 
   done: StandupPerson[] = [
     {
-      color: '#436cee',
-      position: 'Tech Lead',
-      name: 'Александр Денщиков отпуск до 19 июня',
-    },
-    {
-      color: '#a56eff',
-      position: 'Технический писатель',
-      name: 'Ксения Непомнящая отпуск до 25 июня',
-    },
-    { 
-      color: '#ec9827', 
-      position: 'QA-инженер', 
-      name: 'Юлия Мартынова отпуск до 30 июня' 
+      color: '#ec9827',
+      position: 'QA-инженер',
+      name: 'Юлия Мартынова отпуск до 30 июня',
     },
   ];
 
