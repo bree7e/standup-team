@@ -161,16 +161,7 @@ export class StandupComponent {
       name: 'Никита Шивинский',
     },
     { color: '#498714', position: 'Frontend Lead', name: 'Александр Ветров' },
-    {
-      color: '#498714',
-      position: 'Frontend Developer',
-      name: 'Денис Ситдиков',
-    },
-    {
-      color: '#498714',
-      position: 'Frontend Developer',
-      name: 'Сергей Тихонов',
-    },
+
     {
       color: '#498714',
       position: 'Frontend Developer',
@@ -179,8 +170,12 @@ export class StandupComponent {
     { color: '#ec9827', position: 'QA-лид', name: 'Евгений Питрук' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA-инженер', name: 'Павел Парфёнов' },
+    {
+      color: '#ec9827',
+      position: 'QA-инженер',
+      name: 'Юлия Мартынова',
+    },
     { color: '#a56eff', position: 'UX дизайнер', name: 'Алиса Акулинина' },
-    { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
     { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
     {
       color: '#a56eff',
@@ -190,10 +185,16 @@ export class StandupComponent {
   ];
 
   done: StandupPerson[] = [
+    { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
     {
-      color: '#ec9827',
-      position: 'QA-инженер',
-      name: 'Юлия Мартынова отпуск до 30 июня',
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Денис Ситдиков',
+    },
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Сергей Тихонов',
     },
   ];
 
