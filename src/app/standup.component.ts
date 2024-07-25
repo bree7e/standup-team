@@ -114,6 +114,7 @@ const localStorageKey = 'zmeb-standup-team-holiday';
 
       .person__position {
         color: grey;
+        margin-left: 4px;
       }
 
       .person__holiday {
@@ -184,6 +185,11 @@ export class StandupComponent implements OnInit {
     {
       color: '#498714',
       position: 'Frontend Developer',
+      name: 'Сергей Тихонов',
+    },
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
       name: 'Александр Фёдоров',
     },
     { color: '#ec9827', position: 'QA-лид', name: 'Евгений Питрук' },
@@ -207,11 +213,6 @@ export class StandupComponent implements OnInit {
       name: 'Михаил',
     },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
-    {
-      color: '#498714',
-      position: 'Frontend Developer',
-      name: 'Сергей Тихонов',
-    },
   ];
 
   done: StandupPerson[] = [];
