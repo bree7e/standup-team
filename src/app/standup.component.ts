@@ -64,12 +64,6 @@ const localStorageKey = 'zmeb-standup-team-holiday';
         }
       </div>
     </div>
-
-    <div class="container">
-      @for (name of holidayNameList; track name) {
-      <span>{{ name }} </span>
-      }
-    </div>
   `,
   styles: [
     `
