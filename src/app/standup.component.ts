@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   CdkDragDrop,
@@ -13,6 +13,8 @@ interface StandupPerson {
   name: string;
   position: string;
 }
+
+const localStorageKey = 'zmeb-standup-team-holiday';
 
 @Component({
   selector: 'standup-team-welcome',
@@ -49,15 +51,24 @@ interface StandupPerson {
         class="list"
         (cdkDropListDropped)="drop($event)"
       >
-        @for (item of done; track item) {
+        @for (item of done; track item.name) {
         <div class="person" cdkDrag>
           <div class="person__side" [style.background-color]="item.color"></div>
-          <div class="person__name">
-            {{ item.name }} <button>Отпуск</button>
+          <div class="person__name" (dblclick)="toggleHoliday(item)">
+            {{ item.name }}
+            <span *ngIf="holidayNameList.has(item.name)" class="person__holiday"
+              >🌴</span
+            >
           </div>
         </div>
         }
       </div>
+    </div>
+
+    <div class="container">
+      @for (name of holidayNameList; track name) {
+      <span>{{ name }} </span>
+      }
     </div>
   `,
   styles: [
@@ -103,8 +114,16 @@ interface StandupPerson {
         margin-right: 16px;
       }
 
+      .person__name {
+        display: flex;
+      }
+
       .person__position {
         color: grey;
+      }
+
+      .person__holiday {
+        margin-left: auto;
       }
 
       .cdk-drag-preview {
@@ -132,7 +151,7 @@ interface StandupPerson {
     `,
   ],
 })
-export class StandupComponent {
+export class StandupComponent implements OnInit {
   todo: StandupPerson[] = [
     { color: '#c13f2f', position: 'Product owner', name: 'Сергей Балашов' },
     { color: '#c13f2f', position: 'Delivery Manager', name: 'Ника Решанова' },
@@ -193,9 +212,6 @@ export class StandupComponent {
       position: 'Технический писатель',
       name: 'Михаил',
     },
-  ];
-
-  done: StandupPerson[] = [
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
     {
       color: '#498714',
@@ -204,7 +220,14 @@ export class StandupComponent {
     },
   ];
 
-  holidayList: StandupPerson[] = [];
+  done: StandupPerson[] = [];
+
+  holidayNameList = new Set<string>();
+
+  ngOnInit(): void {
+    this.loadFromStorage();
+    this.moveToDone();
+  }
 
   drop(event: CdkDragDrop<StandupPerson[]>) {
     if (event.previousContainer === event.container) {
@@ -223,5 +246,38 @@ export class StandupComponent {
     }
   }
 
-  toggleDefault() {}
+  toggleHoliday(person: StandupPerson): void {
+    if (this.holidayNameList.has(person.name)) {
+      this.holidayNameList.delete(person.name);
+    } else {
+      this.holidayNameList.add(person.name);
+    }
+    this.saveToStorage();
+  }
+
+  moveToDone(): void {
+    [...this.todo].forEach((person, index) => {
+      if (this.holidayNameList.has(person.name)) {
+        transferArrayItem(this.todo, this.done, index, 0);
+      }
+    });
+  }
+
+  saveToStorage(): void {
+    localStorage.setItem(
+      localStorageKey,
+      JSON.stringify(Array.from(this.holidayNameList))
+    );
+  }
+
+  loadFromStorage(): void {
+    const savedHoliday = localStorage.getItem(localStorageKey);
+    if (savedHoliday !== null)
+      try {
+        const list = JSON.parse(savedHoliday) as string[];
+        this.holidayNameList = new Set(list);
+      } catch (error) {
+        console.warn(savedHoliday);
+      }
+  }
 }
