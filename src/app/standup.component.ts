@@ -28,7 +28,7 @@ interface StandupPerson {
         [cdkDropListConnectedTo]="[doneList]"
         (cdkDropListDropped)="drop($event)"
       >
-        @for (item of todo; track item) {
+        @for (item of todo; track item.name) {
         <div class="person" cdkDrag>
           <div class="person__side" [style.background-color]="item.color"></div>
           <div class="person__name">
@@ -52,7 +52,9 @@ interface StandupPerson {
         @for (item of done; track item) {
         <div class="person" cdkDrag>
           <div class="person__side" [style.background-color]="item.color"></div>
-          <div class="person__name">{{ item.name }}</div>
+          <div class="person__name">
+            {{ item.name }} <button>Отпуск</button>
+          </div>
         </div>
         }
       </div>
@@ -161,7 +163,11 @@ export class StandupComponent {
       name: 'Никита Шивинский',
     },
     { color: '#498714', position: 'Frontend Lead', name: 'Александр Ветров' },
-
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Денис Ситдиков',
+    },
     {
       color: '#498714',
       position: 'Frontend Developer',
@@ -182,6 +188,11 @@ export class StandupComponent {
       position: 'Технический писатель',
       name: 'Ксения Непомнящая',
     },
+    {
+      color: '#a56eff',
+      position: 'Технический писатель',
+      name: 'Михаил',
+    },
   ];
 
   done: StandupPerson[] = [
@@ -189,14 +200,11 @@ export class StandupComponent {
     {
       color: '#498714',
       position: 'Frontend Developer',
-      name: 'Денис Ситдиков',
-    },
-    {
-      color: '#498714',
-      position: 'Frontend Developer',
       name: 'Сергей Тихонов',
     },
   ];
+
+  holidayList: StandupPerson[] = [];
 
   drop(event: CdkDragDrop<StandupPerson[]>) {
     if (event.previousContainer === event.container) {
@@ -214,4 +222,6 @@ export class StandupComponent {
       );
     }
   }
+
+  toggleDefault() {}
 }
