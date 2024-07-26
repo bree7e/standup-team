@@ -12,4 +12,4 @@ Run `npx nx build standup-team` to build the application. The build artifacts ar
 
 ## Deploy
 
-`npx nx deploy --base-href=standup-team`
+`npx nx deploy --base-href=/standup-team/`
