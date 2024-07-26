@@ -30,10 +30,10 @@ const localStorageKey = 'zmeb-standup-team-holiday';
         [cdkDropListConnectedTo]="[doneList]"
         (cdkDropListDropped)="drop($event)"
       >
-        @for (item of todo; track item.name) {
+        @for (item of todo; track item.name; let index = $index) {
         <div class="person" cdkDrag>
           <div class="person__side" [style.background-color]="item.color"></div>
-          <div class="person__name">
+          <div class="person__name" (dblclick)="moveToDone(index)">
             {{ item.name }}
             <span class="person__position">{{ item.position }}</span>
           </div>
@@ -221,7 +221,7 @@ export class StandupComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadFromStorage();
-    this.moveToDone();
+    this.moveFromHolidayToDone();
   }
 
   drop(event: CdkDragDrop<StandupPerson[]>) {
@@ -250,7 +250,11 @@ export class StandupComponent implements OnInit {
     this.saveToStorage();
   }
 
-  moveToDone(): void {
+  moveToDone(index: number): void {
+    transferArrayItem(this.todo, this.done, index, 0);
+  }
+
+  moveFromHolidayToDone(): void {
     [...this.todo].forEach((person, index) => {
       if (this.holidayNameList.has(person.name)) {
         transferArrayItem(this.todo, this.done, index, 0);
