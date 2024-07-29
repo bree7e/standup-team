@@ -255,8 +255,9 @@ export class StandupComponent implements OnInit {
   }
 
   moveFromHolidayToDone(): void {
-    [...this.todo].forEach((person, index) => {
+    this.todo.forEach((person) => {
       if (this.holidayNameList.has(person.name)) {
+        const index = this.todo.findIndex((p) => p.name === person.name);
         transferArrayItem(this.todo, this.done, index, 0);
       }
     });
