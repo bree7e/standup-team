@@ -35,7 +35,6 @@ const localStorageKey = 'zmeb-standup-team-holiday';
           <div class="person__side" [style.background-color]="item.color"></div>
           <div class="person__name" (dblclick)="moveToDone(index)">
             {{ item.name }}
-            <span class="person__position">{{ item.position }}</span>
           </div>
         </div>
         }
@@ -68,7 +67,7 @@ const localStorageKey = 'zmeb-standup-team-holiday';
   styles: [
     `
       .container {
-        width: 320px;
+        width: 300px;
         max-width: 100%;
         margin: 0 25px 25px 0;
         display: inline-block;
