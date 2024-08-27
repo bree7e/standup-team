@@ -35,6 +35,7 @@ const localStorageKey = 'zmeb-standup-team-holiday';
           <div class="person__side" [style.background-color]="item.color"></div>
           <div class="person__name" (dblclick)="moveToDone(index)">
             {{ item.name }}
+            <span class="person__index">{{ index + 1 }}</span>
           </div>
         </div>
         }
@@ -117,6 +118,11 @@ const localStorageKey = 'zmeb-standup-team-holiday';
       }
 
       .person__holiday {
+        margin-left: auto;
+      }
+
+      .person__index {
+        color: grey;
         margin-left: auto;
       }
 
@@ -275,4 +281,3 @@ export class StandupComponent implements OnInit {
       }
   }
 }
-
