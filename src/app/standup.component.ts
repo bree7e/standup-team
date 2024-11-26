@@ -154,7 +154,8 @@ const localStorageKey = 'zmeb-standup-team-holiday';
 export class StandupComponent implements OnInit {
   todo: StandupPerson[] = [
     { color: '#c13f2f', position: 'Product owner', name: 'Сергей Балашов' },
-    { color: '#c13f2f', position: 'Delivery Manager', name: 'Ника Решанова' },
+    { color: '#c13f2f', position: 'Manager', name: 'Александр Анисимов' },
+    { color: '#c13f2f', position: 'Manager', name: 'Татьяна Дудник' },
     {
       color: '#6e778c',
       position: 'Системный аналитик ',
