@@ -155,7 +155,6 @@ export class StandupComponent implements OnInit {
   todo: StandupPerson[] = [
     { color: '#c13f2f', position: 'Product owner', name: 'Сергей Балашов' },
     { color: '#c13f2f', position: 'Manager', name: 'Александр Анисимов' },
-    { color: '#c13f2f', position: 'Manager', name: 'Татьяна Дудник' },
     {
       color: '#6e778c',
       position: 'Системный аналитик ',
@@ -167,16 +166,26 @@ export class StandupComponent implements OnInit {
       position: 'Системный аналитик',
       name: 'Олег Колношенко',
     },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Софья Горина',
+    },
     { color: '#6e778c', position: 'UX дизайнер', name: 'Алиса Акулинина' },
     {
       color: '#436cee',
-      position: 'Tech Lead',
+      position: 'Team Lead',
       name: 'Александр Денщиков',
     },
     {
       color: '#436cee',
       position: 'Backend Developer',
       name: 'Александр Кравчук',
+    },
+    {
+      color: '#436cee',
+      position: 'Backend Developer',
+      name: 'Евгений Савицкий',
     },
     {
       color: '#436cee',
@@ -192,14 +201,19 @@ export class StandupComponent implements OnInit {
     {
       color: '#498714',
       position: 'Frontend Developer',
-      name: 'Сергей Тихонов',
+      name: 'Дмитрий Пичугин',
     },
     {
       color: '#498714',
       position: 'Frontend Developer',
       name: 'Александр Фёдоров',
     },
-    { color: '#ec9827', position: 'QA Lead', name: 'Евгений Питрук' },
+    {
+      color: '#498714',
+      position: 'Frontend Developer',
+      name: 'Сергей Черентаев',
+    },
+    { color: '#ec9827', position: 'QA Lead', name: 'Анастасия Мехонишина' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Павел Парфёнов' },
     {
