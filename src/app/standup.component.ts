@@ -155,28 +155,14 @@ export class StandupComponent implements OnInit {
   todo: StandupPerson[] = [
     { color: '#c13f2f', position: 'Product owner', name: 'Яна Зимина' },
     { color: '#c13f2f', position: 'Manager', name: 'Александр Анисимов' },
+    { color: '#ec9827', position: 'QA Lead', name: 'Анастасия Мехоношина' },
+    { color: '#ec9827', position: 'QA Engineer', name: 'Виктория Гилль' },
+    { color: '#ec9827', position: 'QA Engineer', name: 'Павел Парфёнов' },
     {
-      color: '#6e778c',
-      position: 'Системный аналитик ',
-      name: 'Алексей Кулёв',
+      color: '#ec9827',
+      position: 'QA Engineer',
+      name: 'Юлия Мартынова',
     },
-    { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
-    {
-      color: '#6e778c',
-      position: 'Системный аналитик',
-      name: 'Олег Колношенко',
-    },
-    {
-      color: '#6e778c',
-      position: 'Системный аналитик',
-      name: 'Софья Горина',
-    },
-    {
-      color: '#6e778c',
-      position: 'Системный аналитик',
-      name: 'Вадим Нафиков',
-    },
-    { color: '#6e778c', position: 'UX дизайнер', name: 'Алиса Акулинина' },
     {
       color: '#436cee',
       position: 'Team Lead',
@@ -218,15 +204,29 @@ export class StandupComponent implements OnInit {
       position: 'Frontend Developer',
       name: 'Александр Фёдоров',
     },
-    { color: '#ec9827', position: 'QA Lead', name: 'Анастасия Мехоношина' },
-    { color: '#ec9827', position: 'QA Engineer', name: 'Виктория Гилль' },
-    { color: '#ec9827', position: 'QA Engineer', name: 'Павел Парфёнов' },
-    {
-      color: '#ec9827',
-      position: 'QA Engineer',
-      name: 'Юлия Мартынова',
-    },
     { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик ',
+      name: 'Алексей Кулёв',
+    },
+    { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Олег Колношенко',
+    },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Софья Горина',
+    },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Вадим Нафиков',
+    },
+    { color: '#6e778c', position: 'UX дизайнер', name: 'Алиса Акулинина' },
     {
       color: '#a56eff',
       position: 'Технический писатель',
