@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "deploy": "nx deploy --base-href=/standup-team/",
     "test": "nx test"
   },
   "private": true,
