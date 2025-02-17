@@ -228,7 +228,7 @@ export class StandupComponent implements OnInit {
       position: 'Системный аналитик',
       name: 'Вадим Нафиков',
     },
-    { color: '#6e778c', position: 'UX дизайнер', name: 'Алиса Акулинина' },
+    { color: '#6e778c', position: 'UX дизайнер', name: 'Алина Мерушкина' },
     {
       color: '#a56eff',
       position: 'Технический писатель',
