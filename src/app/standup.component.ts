@@ -184,6 +184,11 @@ export class StandupComponent implements OnInit {
       position: 'Backend Developer',
       name: 'Никита Шивинский',
     },
+    {
+      color: '#436cee',
+      position: 'Backend Developer',
+      name: 'Максим Черничкин',
+    },
     { color: '#498714', position: 'Frontend Lead', name: 'Александр Ветров' },
     {
       color: '#498714',
