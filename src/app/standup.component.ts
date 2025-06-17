@@ -206,21 +206,10 @@ export class StandupComponent implements OnInit {
       position: 'Системный аналитик ',
       name: 'Алексей Кулёв',
     },
-    { color: '#6e778c', position: 'Продуктовый аналитик', name: 'Вадим Ус' },
-    {
-      color: '#6e778c',
-      position: 'Системный аналитик',
-      name: 'Олег Колношенко',
-    },
     {
       color: '#6e778c',
       position: 'Системный аналитик',
       name: 'Софья Горина',
-    },
-    {
-      color: '#6e778c',
-      position: 'Системный аналитик',
-      name: 'Вадим Нафиков',
     },
     { color: '#6e778c', position: 'UX дизайнер', name: 'Алина Мерушкина' },
     {
@@ -229,7 +218,6 @@ export class StandupComponent implements OnInit {
       name: 'Татьяна Колоколова',
     },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
-    { color: '#c13f2f', position: 'Product owner', name: 'Яна Зимина' },
   ];
 
   done: StandupPerson[] = [];
