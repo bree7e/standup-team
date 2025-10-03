@@ -154,15 +154,22 @@ const localStorageKey = 'zmeb-standup-team-holiday';
 export class StandupComponent implements OnInit {
   todo: StandupPerson[] = [
     { color: '#c13f2f', position: 'Manager', name: 'Александр Анисимов' },
-    { color: '#ec9827', position: 'QA Lead', name: 'Александр Ястребов' },
+    { color: '#c13f2f', position: 'Product Owner', name: 'Сергей Балашов' },
+    { color: '#ec9827', position: 'QA Lead', name: 'Владислав Образцов' },
+    { color: '#ec9827', position: 'QA Engineer', name: 'Александр Ястребов' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Валентин Елезов' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Евгений Кульков' },
-    { color: '#ec9827', position: 'QA Engineer', name: 'Илья Волков' },
+    { color: '#ec9827', position: 'QA Engineer', name: 'Кирилл Тихомиров' },
     {
       color: '#ec9827',
       position: 'QA Engineer',
       name: 'Юлия Мартынова',
+    },
+    {
+      color: '#436cee',
+      position: 'Backend Lead',
+      name: 'Андрей Федотов',
     },
     {
       color: '#436cee',
@@ -178,11 +185,6 @@ export class StandupComponent implements OnInit {
       color: '#436cee',
       position: 'Backend Developer',
       name: 'Никита Шивинский',
-    },
-    {
-      color: '#436cee',
-      position: 'Backend Developer',
-      name: 'Максим Черничкин',
     },
     { color: '#498714', position: 'Frontend Lead', name: 'Александр Ветров' },
     {
@@ -200,6 +202,11 @@ export class StandupComponent implements OnInit {
       position: 'Frontend Developer',
       name: 'Александр Фёдоров',
     },
+    {
+      color: '#a56eff',
+      position: 'Архитектор',
+      name: 'Максим Гопоненко',
+    },
     { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
     {
       color: '#6e778c',
@@ -209,13 +216,23 @@ export class StandupComponent implements OnInit {
     {
       color: '#6e778c',
       position: 'Системный аналитик',
-      name: 'Софья Горина',
+      name: 'Дмитрий Мельников',
+    },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Евгений Карасёв',
     },
     { color: '#6e778c', position: 'UX дизайнер', name: 'Алина Мерушкина' },
     {
       color: '#a56eff',
       position: 'Технический писатель',
       name: 'Татьяна Колоколова',
+    },
+    {
+      color: '#a56eff',
+      position: 'Технический писатель',
+      name: 'Игорь Покатаев',
     },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
   ];
