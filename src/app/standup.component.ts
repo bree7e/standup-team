@@ -161,6 +161,7 @@ export class StandupComponent implements OnInit {
     { color: '#ec9827', position: 'QA Engineer', name: 'Валентин Елезов' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Евгений Кульков' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Кирилл Тихомиров' },
+    { color: '#ec9827', position: 'QA Engineer', name: 'Сергей Скроботов' },
     {
       color: '#ec9827',
       position: 'QA Engineer',
@@ -222,6 +223,11 @@ export class StandupComponent implements OnInit {
       color: '#6e778c',
       position: 'Системный аналитик ',
       name: 'Алексей Кулёв',
+    },
+    {
+      color: '#6e778c',
+      position: 'Бизнес аналитик ',
+      name: 'Максим Небера',
     },
     {
       color: '#6e778c',
