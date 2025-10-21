@@ -157,16 +157,10 @@ export class StandupComponent implements OnInit {
     { color: '#c13f2f', position: 'Product Owner', name: 'Сергей Балашов' },
     { color: '#ec9827', position: 'QA Lead', name: 'Владислав Образцов' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Александр Ястребов' },
-    { color: '#ec9827', position: 'QA Engineer', name: 'Виктория Гилль' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Валентин Елезов' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Евгений Кульков' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Кирилл Тихомиров' },
     { color: '#ec9827', position: 'QA Engineer', name: 'Сергей Скроботов' },
-    {
-      color: '#ec9827',
-      position: 'QA Engineer',
-      name: 'Юлия Мартынова',
-    },
     {
       color: '#436cee',
       position: 'Backend Lead',
@@ -208,17 +202,12 @@ export class StandupComponent implements OnInit {
       position: 'Frontend Developer',
       name: 'Александр Фёдоров',
     },
+    { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
     {
-      color: '#a56eff',
+      color: '#6e778c',
       position: 'Функциональный архитектор',
       name: 'Светлана Гареева',
     },
-    {
-      color: '#a56eff',
-      position: 'Архитектор',
-      name: 'Максим Гопоненко',
-    },
-    { color: '#a56eff', position: 'Математик', name: 'Алексей Кручинин' },
     {
       color: '#6e778c',
       position: 'Системный аналитик ',
@@ -249,11 +238,6 @@ export class StandupComponent implements OnInit {
       color: '#a56eff',
       position: 'Технический писатель',
       name: 'Татьяна Колоколова',
-    },
-    {
-      color: '#a56eff',
-      position: 'Технический писатель',
-      name: 'Игорь Покатаев',
     },
     { color: '#a56eff', position: 'DevOps инженер', name: 'Рустам Галимов' },
   ];
