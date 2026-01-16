@@ -191,6 +191,11 @@ export class StandupComponent implements OnInit {
       position: 'Backend Developer',
       name: 'Андрей Пучков',
     },
+    {
+      color: '#436cee',
+      position: 'Backend Developer',
+      name: 'Михаил Шаховалов',
+    },
     { color: '#498714', position: 'Frontend Lead', name: 'Александр Ветров' },
     {
       color: '#498714',
@@ -232,6 +237,11 @@ export class StandupComponent implements OnInit {
       color: '#6e778c',
       position: 'Системный аналитик',
       name: 'Дмитрий Мельников',
+    },
+    {
+      color: '#6e778c',
+      position: 'Системный аналитик',
+      name: 'Алексей Рузанов',
     },
     { color: '#6e778c', position: 'UX дизайнер', name: 'Алина Мерушкина' },
     {
